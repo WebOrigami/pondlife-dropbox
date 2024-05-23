@@ -1,0 +1,20 @@
+{
+  "name": "origami-blog-start",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@weborigami/origami": "0.0.51"
+  },
+  "engines": {
+    "node": "^22.0.0"
+  },
+  "license": "MIT",
+  "glitch": {
+    "projectType": "generated_static"
+  },
+  "scripts": {
+    "build": "rm -rf build; ori @copy src/site.ori, @mkdir/build",
+    "docs": "ori '@svg docs/diagram.ori, { createLinks: false }' > docs/site.svg",
+    "start": "ori @serve @watch src, =@debug site.ori"
+  }
+}
