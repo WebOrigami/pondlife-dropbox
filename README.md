@@ -1,6 +1,10 @@
-This project offers you a starting point for building a blog in the [Origami](https://weborigami.org) language.
+This project shows a sample blog written in [Origami](https://weborigami.org) language.
 
-[View sample blog](https://pondlife.netlify.app)
+[View the sample blog](https://pondlife.netlify.app)
+
+This sample blog is based on the [origami-blog-start](https://github.com/WebOrigami/origami-blog-start) project. If you'd like to start your own blog like this, you can fork that project.
+
+The text for this sample blog is adapted from portions of [Walden](https://www.gutenberg.org/files/205/205-h/205-h.htm) by Henry David Thoreau.
 
 ## Structure of the site
 
@@ -8,9 +12,9 @@ The [site.ori](src/site.ori) file orchestrates the construction of the site:
 
 <img src="docs/site.svg">
 
-- Each blog post starts as a markdown file in the `content` folder.
+- Each blog post starts as a markdown file in the `markdown` folder.
 - A series of transformations turns each post into an HTML page in the `posts` area.
-- Posts are grouped into pages of 5 posts each in the `pages` area.
+- Posts are grouped into pages of 10 posts each in the `pages` area.
 - The index page shows the same content as `pages/1.html`.
 - Feeds are created for the posts in RSS and JSON Feed format.
 
