@@ -6,6 +6,9 @@
     "@weborigami/origami": "0.0.51"
   },
   "license": "MIT",
+  "engines": {
+    "node": "^22.0.0"
+  },
   "scripts": {
     "build": "rm -rf build; ori @copy src/site.ori, @mkdir/build",
     "docs": "ori '@svg docs/diagram.ori, { createLinks: false }' > docs/site.svg",
