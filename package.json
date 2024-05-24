@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "rm -rf build; ori @copy src/site.ori, @mkdir/build",
-    "docs": "ori '@svg docs/diagram.ori, { createLinks: false }' > docs/site.svg",
+    "docs": "ori '@svg docs/start.yaml, { createLinks: false }' > docs/start.svg; ori '@svg docs/end.yaml, { createLinks: false }' > docs/end.svg",
     "start": "ori @serve @watch src, =@debug site.ori"
   }
 }

@@ -8,12 +8,15 @@ The text for this sample blog is adapted from portions of [Walden](https://www.g
 
 ## Structure of the site
 
-The [site.ori](src/site.ori) file orchestrates the construction of the site:
+The site's starting point are the markdown files in the `markdown` folder, the images in the `images` folder, and the stylesheet and other files in the `src/assets` folder.
 
-<img src="docs/site.svg">
+<img src="docs/start.svg">
 
-- Each blog post starts as a markdown file in the `markdown` folder.
-- A series of transformations turns each post into an HTML page in the `posts` area.
+The [site.ori](src/site.ori) file orchestrates the transformation of that content into the final tree of resources for the site:
+
+<img src="docs/end.svg">
+
+- A series of transformations turns each markdown post into an HTML page in the `posts` area.
 - Posts are grouped into pages of 10 posts each in the `pages` area.
 - The index page shows the same content as `pages/1.html`.
 - Feeds are created for the posts in RSS and JSON Feed format.
