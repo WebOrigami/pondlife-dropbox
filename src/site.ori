@@ -1,9 +1,9 @@
 // Origami program to generate a blog from a folder of markdown files
 {
-  // Define a pipeline that starts with the folder of markdown files and applies
-  // a series of transformations to process them into data that's ready to be
-  // displayed on the various types of pages.
-  data = markdown
+  // Define a pipeline that starts with the folder of markdown files on Dropbox
+  // and applies a series of transformations to process them into data that's
+  // ready to be displayed on the various types of pages.
+  data = dropbox.ori/markdown
     // Convert the markdown to HTML, changing the extension from `md` to `html`.
     → @mapFn(@mdHtml)
     // Add a `date` field parsed from the filename.
@@ -25,9 +25,11 @@
     // About page uses the basic template.
     about.html = page.ori(@mdHtml(about.md))
 
-    // Assets (fonts, styles) and images are included as is.
+    // Assets (fonts, styles) are included as is.
     assets
-    images
+
+    // Get images from Dropbox.
+    images = dropbox.ori/images
 
     // Use the first page of posts as the home page.
     index.html = pages/1.html
