@@ -6,6 +6,7 @@
   feed_url: `${ siteInfo.yaml/url }/feed.json`
   home_page_url: siteInfo.yaml/url
   
+  // Map the post data to JSON Feed items
   items: @values(@map(posts, (post, slug) => {
     content_html: post/@text
     date_published: post/date

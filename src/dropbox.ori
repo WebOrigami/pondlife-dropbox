@@ -1,9 +1,7 @@
 // This returns the Dropbox folder with the images and markdown, applying a
 // local cache to speed up development.
 
-package:@weborigami/dropbox(creds.json)/pondlife
-
-→ (root) => {
-  markdown: @cache(root/markdown, @files/cache/markdown)
-  images: @cache(root/images, @files/cache/images)
-}
+@cache(
+  package:@weborigami/dropbox(creds.json)/pondlife/
+  @files/cache
+)
