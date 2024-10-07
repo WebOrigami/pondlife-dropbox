@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@weborigami/dropbox": "0.0.5",
-    "@weborigami/origami": "0.0.66"
+    "@weborigami/dropbox": "0.0.6",
+    "@weborigami/origami": "0.0.68"
   },
   "license": "MIT",
   "engines": {
